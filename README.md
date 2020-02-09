@@ -1,6 +1,10 @@
 ## Wow Guild Marketplace
 
-Web application using laravel to link offer and demand in wow.
+Small marketplace.
+
+Stack :
+- Laravel
+- Semantic UI
 
 Install : 
 ```
