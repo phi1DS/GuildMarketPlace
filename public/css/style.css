@@ -1,0 +1,13 @@
+.custom_scroll_container {
+    height: calc(100vh - 98px);
+    overflow-y: scroll;
+    margin-top: 14px;
+}
+
+.custom_text_align_right {
+    text-align: right !important;
+}
+
+.custom_pointer:hover {
+    cursor: pointer;
+}
