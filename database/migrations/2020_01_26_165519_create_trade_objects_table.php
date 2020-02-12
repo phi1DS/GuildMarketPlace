@@ -16,6 +16,7 @@ class CreateTradeObjectsTable extends Migration
         Schema::create('trade_objects', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('wowhead_id');
+            $table->unsignedInteger('quantity');
 
             $table->unsignedBigInteger('trade_request_id');
             $table->foreign('trade_request_id')

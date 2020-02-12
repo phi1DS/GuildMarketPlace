@@ -14,6 +14,7 @@ use Faker\Generator as Faker;
 $factory->define(TradeObject::class, function (Faker $faker) {
     return [
         'wowhead_id' => rand(1000, 6000),
+        'quantity' => rand(1, 10),
         'trade_request_id' => factory(TradeRequest::class),
     ];
 });

@@ -30,7 +30,7 @@
                                                 @foreach($tradeRequest->tradeObjects->all() as $tradeObject)
                                                 <tr>
                                                     <td><a href="https://fr.wowhead.com/item={{ $tradeObject->wowhead_id }}" data-wowhead="item={{ $tradeObject->wowhead_id }}" data-wh-icon-size="small"></a></td>
-                                                    <td class="custom_text_align_right">{{ $tradeObject->wowhead_id }}</td>
+                                                    <td class="custom_text_align_right">{{ $tradeObject->quantity }}</td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
@@ -69,7 +69,7 @@
                                                 @foreach($tradeRequest->tradeObjects->all() as $tradeObject)
                                                 <tr>
                                                     <td><a href="https://fr.wowhead.com/item={{ $tradeObject->wowhead_id }}" data-wowhead="item={{ $tradeObject->wowhead_id }}" data-wh-icon-size="small"></a></td>
-                                                    <td class="custom_text_align_right">{{ $tradeObject->wowhead_id }}</td>
+                                                    <td class="custom_text_align_right">{{ $tradeObject->quantity }}</td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
