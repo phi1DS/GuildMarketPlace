@@ -30,8 +30,9 @@
             </div>
 
             <div class="field" data-type="object_field">
-                <div class="inline field custom_form_object" data-type="base_object" data-object-number="0">
-                    <input type="number" class="trade-object" name="object-0" placeholder="Ex : 4851">
+                <div class="inline field custom_form_object" data-type="base_object">
+                    <input type="number" class="trade-object" name="tradeObject[]" placeholder="Wowhead id">
+                    <input type="number" class="trade-object" name="tradeObjectQuantity[]" placeholder="Quantity">
                 </div>
             </div>
 
