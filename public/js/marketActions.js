@@ -12,6 +12,6 @@ $(document).ready(function() {
     $('*[data-trigger="validate"]').click(function() {
         let redirectUrl = $currentElement.data('target');
         console.log('redirect to :'+redirectUrl);
-        //window.location.replace(redirectUrl);
+        window.location.replace(redirectUrl);
     });
 });

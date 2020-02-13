@@ -36,7 +36,7 @@ class TradeRequestController extends Controller
 
         $tradeRequest->save();
 
-        return redirect('/');
+        return redirect()->route('TradeRequestsShowOngoing');
     }
 
     public function validateTradeRequest()
@@ -55,7 +55,7 @@ class TradeRequestController extends Controller
 
         // add to session modal
 
-        return redirect('/');
+        return redirect()->route('TradeRequestsShowOngoing');
     }
 
 //    public function edit($id)
@@ -86,6 +86,6 @@ class TradeRequestController extends Controller
 
         // add to session modal
 
-        return redirect('/');
+        return redirect()->route('TradeRequestsShowOngoing');
     }
 }

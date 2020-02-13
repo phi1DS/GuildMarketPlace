@@ -19,7 +19,7 @@
                                             <tr>
                                                 <th>{{ $tradeRequest->customer }}</th>
                                                 <th class="custom_text_align_right">
-                                                    <i class="close icon red" data-trigger="delete" data-target="/delete/{{ $tradeRequest->id }}"></i>
+                                                    <i class="close icon red custom_pointer" data-trigger="delete" data-target="{{ route('DeleteTradeRequest', $tradeRequest->id) }}"></i>
                                                 </th>
                                             </tr>
                                             </thead>
@@ -58,7 +58,7 @@
                                             <tr>
                                                 <th>{{ $tradeRequest->customer }}</th>
                                                 <th class="custom_text_align_right">
-                                                    <i class="close icon red" data-trigger="delete" data-target="/delete/{{ $tradeRequest->id }}"></i>
+                                                    <i class="close icon red custom_pointer" data-trigger="delete" data-target="{{ route('DeleteTradeRequest', $tradeRequest->id) }}"></i>
                                                 </th>
                                             </tr>
                                             </thead>

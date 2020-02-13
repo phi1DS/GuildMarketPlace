@@ -21,4 +21,4 @@ Route::get('/tradeRequest/create', function () {
     return view('trade_request.create');
 })->name('CreateTradeRequest');
 
-Route::delete('/tradeRequest/delete', 'TradeRequestController@delete')->name('DeleteTradeRequest');
+Route::get('/tradeRequest/delete/{id}', 'TradeRequestController@delete')->name('DeleteTradeRequest');
