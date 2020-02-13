@@ -2,8 +2,8 @@ $(document).ready(function() {
     function insertDynamicField() {
         let html = '<div class="field">';
         html += '<div class="inline field custom_form_object" data-type="base_object">';
-        html += '<input type="number" class="trade-object" name="tradeObject[]" placeholder="Wowhead id">';
-        html += '<input type="number" class="trade-object" name="tradeObjectQuantity[]" placeholder="Quantity">';
+        html += '<input type="number" class="trade-object" name="tradeObject_wowhead_id[]" placeholder="Wowhead id">';
+        html += '<input type="number" class="trade-object" name="tradeObject_quantity[]" placeholder="Quantity">';
         html += '<i class="close icon red custom_pointer" data-trigger="delete_dom_parent"></i>';
         html += '</div>';
         html += '</div>';

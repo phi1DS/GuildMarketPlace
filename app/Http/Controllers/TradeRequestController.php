@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\TradeObject;
 use App\TradeRequest;
 use Illuminate\Http\Request;
 
@@ -32,9 +33,24 @@ class TradeRequestController extends Controller
 
     public function store()
     {
-        $tradeRequest = new TradeRequest($this->validateTradeRequest());
+//        dd(\request()->all());
+
+        $tradeRequest = new TradeRequest();
+
+        $tradeRequest->customer = \request()->get('customer');
+        $tradeRequest->state = TradeRequest::STATE_ON_GOING;
+        $tradeRequest->comment = \request()->get('comment');
+        $tradeRequest->tradeType = \request()->get('tradeType');
 
         $tradeRequest->save();
+
+        for ($i = 0; $i < sizeof(\request()->get('tradeObject_wowhead_id')); $i++) {
+            $tradeObject = new TradeObject();
+            $tradeObject->wowhead_id = \request()->get('tradeObject_wowhead_id')[$i];
+            $tradeObject->quantity = \request()->get('tradeObject_quantity')[$i];
+
+            $tradeRequest->tradeObjects()->save($tradeObject);
+        }
 
         return redirect()->route('TradeRequestsShowOngoing');
     }
@@ -42,7 +58,10 @@ class TradeRequestController extends Controller
     public function validateTradeRequest()
     {
         \request()->validate([
-            'customer' => 'required'
+            'customer' => 'required',
+            'type' => 'required',
+            'tradeObject_wowhead_id' => 'required',
+            'tradeObject_quantity' => 'required'
         ]);
     }
 
